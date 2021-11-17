@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 
 const Sidebar = () => {
-	return (
-		<>
-			<div className='wrapper'/>
-		</>
-	)
+  return (
+    <>
+      <div className="wrapper" />
+    </>
+  )
 }
 
 export default Sidebar
