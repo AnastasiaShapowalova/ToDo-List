@@ -7,10 +7,12 @@
 		"@testing-library/react": "^11.1.0",
 		"@testing-library/user-event": "^12.1.10",
 		"antd": "^4.16.13",
+		"classnames": "^2.3.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-icons": "^4.3.1",
 		"react-scripts": "^0.9.5",
+		"styled-components": "^5.3.3",
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
@@ -46,5 +48,8 @@
 		"eslint-plugin-react": "^7.20.0",
 		"eslint-plugin-react-hooks": "^4.0.4",
 		"prettier": "^2.0.5"
+	},
+	"resolutions": {
+		"styled-components": "^5"
 	}
 }
