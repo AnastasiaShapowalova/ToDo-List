@@ -1,6 +1,7 @@
 import React from 'react'
 import { SidebarBody } from './domains/Sidebar'
 import { TaskBody } from './domains/Task'
+import { firestore } from './envinronment'
 import './App.css'
 
 function App() {
