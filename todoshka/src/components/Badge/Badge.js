@@ -1,5 +1,4 @@
 import React from 'react'
-import './style.css'
 
 //colors to choose from in modal
 const Badge = (props) => {

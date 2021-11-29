@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
-import { Button } from '../../components'
-import './style/style.css'
 
-function TaskHeading(props) {
+const Heading = (props) => {
+  // will be changed later [lists]
+  //list = DB.lists[1] {color: "x", colorId: x, id: x, name: 'x'}
   const { list } = props
 
   return (
@@ -11,12 +11,12 @@ function TaskHeading(props) {
       <div className="task-heading">
         <div className="complete-wrapper">
           <p className="count-completed">1 Completed &#9900;</p>
-          <Button className="button-transparent clear">Clear</Button>
+          <button className="button-transparent clear">Clear</button>
         </div>
-        <Button className="button-transparent show">Show</Button>
+        <button className="button-transparent show">Show</button>
       </div>
     </Fragment>
   )
 }
 
-export default TaskHeading
+export default Heading
