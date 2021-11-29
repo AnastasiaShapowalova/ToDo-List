@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 const useSetTask = (value, setValue) => {
   //add new obj to array
   const [task, setTask] = useState(value.map((item) => item))

@@ -1,17 +1,21 @@
-import React from 'react'
-import { Badge } from '../Badge'
-import { useSetSelectedColor, useInputValue } from '../../hooks'
-import { Input } from '../Input'
-import { Button } from '../Button'
-import './style.css'
+import React, { useContext } from 'react'
+import { Badge } from '../'
+//context
+import { GlobalContext } from '../../contexts'
 
 const ModalWindow = (props) => {
-  const { color, onAdd, setIsVisible } = props
+  const { color } = props
 
-  //mark selected color, binding the selected color to the list by id
-  const { selectedColor, setSelectedColor, setColor } = useSetSelectedColor()
-  //get value from input
-  const { inputValue, setInputValue, setValue } = useInputValue()
+  const {
+    setIsVisible,
+    onAddList,
+    selectedColor,
+    setSelectedColor,
+    setColor,
+    inputValue,
+    setInputValue,
+    setValue
+  } = useContext(GlobalContext)
 
   // default value of the modal - closing after OK, empty input, the first color is selected
   const onClose = () => {
@@ -24,7 +28,7 @@ const ModalWindow = (props) => {
     // extracts the selected color
     const clr = color.filter((color) => color.id == selectedColor)[0].name
     // fill in the fields of the new list object
-    onAdd({
+    onAddList({
       id: Math.random(),
       name: inputValue,
       count: 0,
@@ -34,6 +38,7 @@ const ModalWindow = (props) => {
     onClose()
   }
 
+  //map displays colors to choose from; choosing color
   const chooseColor = color.map(({ name, id }) => (
     <Badge
       key={id}
@@ -42,16 +47,17 @@ const ModalWindow = (props) => {
       className={selectedColor === id && 'active-icon'}
     />
   ))
+
   return (
     <div className="modal-wrapper">
       <p className="modal-title">New List:</p>
       <label>Name:</label>
       {/* extract the value from the input */}
-      <Input
+      <input
         value={inputValue}
         onChange={(e) => setValue(e.target.value)}
-        className="newlist-input-field"
-        type="text"></Input>
+        className="newlist-input"
+        type="text"></input>
       <div className="color-wrapper">
         <ul>
           {/* output an array of colors, pass the active to the selected through the ID */}
@@ -60,17 +66,17 @@ const ModalWindow = (props) => {
       </div>
       <div className="button-wrapper">
         {/* close the modal on onclik */}
-        <Button className="button cancel" onClick={onClose}>
+        <button className="button cancel" onClick={onClose}>
           Cancel
-        </Button>
+        </button>
         {/* add a list onclick */}
-        <Button
+        <button
           onClick={addList}
           // if nothing is entered, the button is not clickable
           className={!inputValue ? 'button submit disabled' : 'button submit'}
           type="submit">
           OK
-        </Button>
+        </button>
       </div>
     </div>
   )

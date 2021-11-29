@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { ModalWindow } from '../../components'
-import { useSetVisible } from '../../hooks'
+//context
+import { GlobalContext } from '../../contexts'
+//icons
 import { AiOutlinePlus } from 'react-icons/ai'
 
 const SidebarModal = (props) => {
-  const { color, onAdd } = props
-  // hook hides shows modal
-  const { isVisible, setIsVisible } = useSetVisible()
+  //DB.color
+  const { color } = props
+  const { setIsVisible, isVisible } = useContext(GlobalContext)
 
   return (
     <div>
@@ -14,9 +16,7 @@ const SidebarModal = (props) => {
         <AiOutlinePlus className="icon" />
         <span>Add list</span>
       </li>
-      {isVisible && (
-        <ModalWindow color={color} onAdd={onAdd} setIsVisible={setIsVisible} />
-      )}
+      {isVisible && <ModalWindow color={color} />}
     </div>
   )
 }

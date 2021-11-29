@@ -1,7 +1,6 @@
 import React from 'react'
-import { SearchInput } from './'
 
-const SidebarMainList = (props) => {
+const Categories = (props) => {
   const { menu } = props
 
   const mainList = menu.map((obj, index) => (
@@ -16,12 +15,11 @@ const SidebarMainList = (props) => {
 
   return (
     <ul>
-      {/* search input */}
-      <SearchInput />
       {/* main lists */}
       {mainList}
     </ul>
   )
 }
 
-export default SidebarMainList
+export default Categories
+/////////////////////////////////

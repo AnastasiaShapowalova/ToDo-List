@@ -7,7 +7,6 @@ const useSetList = () => {
     DB.lists.map((item) => {
       // output color name by ID
       item.color = DB.color.filter((color) => color.id === item.colorId)[0].name
-      // console.log(item)
       return item
     })
   )

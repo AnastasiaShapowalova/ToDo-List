@@ -1,8 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import { Input } from '../../components'
 import DB from '../../_constants_/db.json'
 import { AiOutlineSearch } from 'react-icons/ai'
-import './style/style.css'
 
 const SearchInput = () => {
   const [searchTask, setSearchTask] = useState('')
@@ -11,11 +9,8 @@ const SearchInput = () => {
   const tassks = []
   DB.tasks.map((value) => tassks.push(value.text))
 
-  // console.log(`tassks.array - ${tassks}`)
-
   useEffect(() => {
     const result = tassks.filter((item) => item.includes(searchTask))
-    // console.log('useEffect = ' + result)
     setSearchRes(result)
   }, [searchTask])
 
@@ -27,12 +22,12 @@ const SearchInput = () => {
     <Fragment>
       <li className="search-input-wrapper">
         <AiOutlineSearch className="icon" />
-        <Input
+        <input
           type="search"
           placeholder="Search"
           className="search"
           value={searchTask}
-          onChange={handleChange}></Input>
+          onChange={handleChange}></input>
       </li>
       {/* дуже дуже пробна версія */}
       <ul>
