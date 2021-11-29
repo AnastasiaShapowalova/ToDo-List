@@ -1,0 +1,66 @@
+.badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+/* badge colors */
+.badge-blue {
+  background-color: rgb(18, 92, 172);
+}
+.badge-salat {
+  background-color: rgb(166, 221, 16);
+}
+.badge-yellow {
+  background-color: rgb(244, 248, 21);
+}
+.badge-red {
+  background-color: rgb(250, 14, 14);
+}
+.badge-violet {
+  background-color: rgb(106, 10, 126);
+}
+.badge-green {
+  background-color: rgb(13, 228, 60);
+}
+.badge-pink {
+  background-color: rgb(243, 38, 192);
+}
+.badge-orange {
+  background-color: rgb(221, 125, 16);
+}
+.badge-white {
+  background-color: rgb(255, 255, 255);
+}
+.badge-lightpink {
+  background-color: rgb(255, 172, 234);
+}
+.badge-grey {
+  background-color: rgb(71, 74, 75);
+}
+.badge-darkgreen {
+  background-color: rgb(10, 83, 34);
+}
+.badge-berry {
+  background-color: rgb(173, 45, 88);
+}
+.badge-aqua {
+  background-color: rgb(13, 221, 228);
+}
+.badge-lightblue {
+  background-color: rgb(100, 115, 245);
+}
+.badge-creme {
+  background-color: rgb(243, 214, 159);
+}
+.badge-dark {
+  background-color: rgb(16, 11, 34);
+}
+.badge-brown {
+  background-color: rgb(110, 51, 11);
+}
+/* active  */
+.active {
+  border: 2px solid black;
+}

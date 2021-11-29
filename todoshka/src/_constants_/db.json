@@ -1,0 +1,37 @@
+{
+	"lists": [
+		{"id": 1, "name": "Home", "colorId": 10},
+		{"id": 2, "name": "Work",  "colorId": 16},
+		{"id": 3, "name": "Study",  "colorId": 15},
+		{"id": 4, "name": "Holidays", "colorId": 6},
+		{"id": 5, "name": "Pets",  "colorId": 9}
+	],
+	"tasks": [
+		{"id": 1, "listId": 2, "text": "Search", "completed": false},
+		{"id": 2, "listId": 2, "text": "Active list",  "completed": false},
+		{"id": 3, "listId": 4, "text": "Binding to list",  "completed": true},
+		{"id": 4, "listId": 3, "text": "Deliting/editing tasks",  "completed": false},
+		{"id": 5, "listId": 3, "text": "tasks 'done'",  "completed": false},
+		{"id": 6, "listId": 1, "text": "Show/hide tasks 'done'",  "completed": false}
+	],
+	"color": [
+		{"id": 1, "rgb": "rgb(18, 92, 172)", "name": "blue"},
+		{"id": 2, "rgb": "rgb(255, 158, 11)", "name": "yellow"},
+		{"id": 3, "rgb": "rgb(255, 69, 58)", "name": "red"},
+		{"id": 4, "rgb": "rgb(192, 13, 228)", "name": "violet"},
+		{"id": 5, "rgb": "rgb(13, 228, 60)", "name": "green"},
+		{"id": 6, "rgb": "rgb(166, 221, 16)", "name": "salat"},
+		{"id": 7, "rgb": "rgb(243, 38, 192)", "name": "pink"},
+		{"id": 8, "rgb": "rgb(221, 125, 16)", "name": "orange"},
+		{"id": 9, "rgb": "rgb(255, 255, 255)", "name": "white"},
+		{"id": 10, "rgb": "rgb(255, 172, 234)", "name": "lightpink"},
+		{"id": 11, "rgb": "rgb(71, 74, 75)", "name": "grey"},
+		{"id": 12, "rgb": "rgb(10, 83, 34)", "name": "darkgreen"},
+		{"id": 13, "rgb": "rgb(173, 45, 88)", "name": "berry"},
+		{"id": 14, "rgb": "rgb(13, 221, 228)", "name": "aqua"},
+		{"id": 15, "rgb": "rgb(100, 115, 245)", "name": "lightblue"},
+		{"id": 16, "rgb": "rgb(243, 214, 159)", "name": "creme"},
+		{"id": 17, "rgb": "rgb(16, 11, 34)", "name": "dark"},
+		{"id": 18, "rgb": "rgb(110, 51, 11)", "name": "brown"}
+	]
+}
