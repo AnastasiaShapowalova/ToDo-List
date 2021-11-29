@@ -9,17 +9,17 @@
 .App {
 	min-height: 100vh;
 	display: flex;
-	background-color: rgb(41, 39, 39);
+	background-color: rgb(32,32,32);
 }
 
 .todo {
 	font-size: 14px;
-	color: white;
+	color: rgb(195, 196, 196);
 }
 
 /* sidebar */
 .todo_sidebar {
-	background-color: rgba(56, 55, 55, 0.384);
+	background-color: rgba(54, 54, 53);
 	width: 300px;
 	height: 100%;
 	border-right: black solid 1px;
@@ -39,6 +39,7 @@ li{
 .icon {
 	font-size: 22px;
 	padding-right: 5px;
+	color: white;
 }
 
 .count_l {
@@ -56,8 +57,9 @@ li{
 	margin: 4px;
 	border-radius: 7px;
 	cursor: pointer;
-	background-color: rgba(163, 162, 162, 0.24);
+	background-color: rgba(94, 94, 94);
 }
+
 .t_active {
 	display: inline-flex;
 	flex-direction: column;
@@ -68,10 +70,12 @@ li{
 	margin: 4px;
 	border-radius: 7px;
 	cursor: pointer;
-	background-color: rgba(0, 0, 255, 0.616);
+	background-color: rgb(11 132 255);
+	color: white;
 }
+
 .f_active {
-  background-color: rgba(255, 217, 0, 0.733);
+  background-color: rgb(255 158 11);
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -81,7 +85,9 @@ li{
 	margin: 4px;
 	border-radius: 7px;
 	cursor: pointer;
+	color: white;
 }
+
 .s_active {
 	display: inline-flex;
 	flex-direction: column;
@@ -92,9 +98,12 @@ li{
 	margin: 4px;
 	border-radius: 7px;
 	cursor: pointer;
-  background-color: rgba(255, 0, 0, 0.555);
+  background-color: rgb(255 69 58);
+	color: white
 }
+
 .a_active {
+	color: white;
 	display: inline-flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -104,7 +113,7 @@ li{
 	margin: 4px;
 	border-radius: 7px;
 	cursor: pointer;
-  background-color: gray;
+  background-color: rgb(101, 102, 102);
 }
 
 .sidebar-heading {
@@ -128,16 +137,212 @@ li{
 	border-radius: 4px;
 	padding: 8px;
 	display: flex;
+	cursor: pointer;
+	color: white
 }
-.active {
+.active_addlist {
 	margin-right: 4px;
 	margin-left: 4px;
 	height: 40px;
 	border-radius: 4px;
 	padding: 8px;
 	display: flex;
-	background-color: rgba(32, 144, 248, 0.555);
+	background-color: rgba(18, 92, 172);
 }
+
+.todo-addbutton {
+	position: absolute;
+	bottom: 14px;
+	padding-left: 8px;
+	font-size: 13px;
+	color: lightgray;
+	cursor: pointer;
+}
+.todo-addbutton:hover {
+	color: white;
+}
+ 
+/* alert add new list */
+.add-list-popup {
+	font-size: 13px;
+	position: absolute;
+	width: 600px;
+	height: 190px;
+  top: 50%;
+	left: 50%;
+	background: rgb(33, 33, 33);
+	border-radius: 9px;
+	border: 1px solid gray;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	color: white
+}
+
+.nameField {
+	background: rgb(44, 44, 44);
+	border: none;
+	border-bottom: 1px solid gray;
+	outline: none;
+	width: 500px;
+	margin-left: 10px;
+	height: 20px;
+}
+
+.btn-field {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+.newlist-label {
+	font-weight: bold;
+}
+
+.newlist-btn {
+	width: 65px;
+	border: none;
+	outline: none;
+	margin: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.cancel {
+	background-color: rgb(89, 89, 89);
+}
+.cancel:focus {
+  background-color: rgb(113, 113, 113);
+}
+.submit {
+	background-color: rgb(22, 113, 217);
+}
+.submit:focus {
+	background-color: rgb(21, 118, 219);
+}
+
+.bage {
+	font-size: large;
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	margin: 20px 34px;
+}
+
+.icon-active {
+	color: rgb(22, 113, 217);
+}
+
+.icon-default{
+	color: white;
+}
+
+
+/* input-search */
+.todo-search {
+	background: rgb(49, 48, 50);
+	border: none;
+	border-bottom: 1px solid gray;
+	outline: none;
+	width: 280px;
+	height: 30px;
+	border-radius: 5px;
+	margin:  20px 5px ;
+	padding: 0 5px;
+}
+.search {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+	margin-right: 10px;
+}
+
+.badge-blue {
+	background-color: rgb(18, 92, 172);
+}
+.badge-salat {
+  background-color: rgb(166, 221, 16);
+}
+.badge-yellow {
+  background-color: rgb(244, 248, 21);
+}
+.badge-red {
+  background-color: rgb(250, 14, 14);
+}
+.badge-violet {
+  background-color: rgb(106, 10, 126);
+}
+.badge-green {
+  background-color: rgb(13, 228, 60);
+}
+.badge-pink {
+  background-color: rgb(243, 38, 192);
+}
+.badge-orange {
+  background-color: rgb(221, 125, 16);
+}
+.badge-white {
+  background-color: rgb(255, 255, 255);
+}
+.badge-lightpink {
+  background-color: rgb(255, 172, 234);
+}
+.badge-grey {
+  background-color: rgb(71, 74, 75);
+}
+.badge-darkgreen {
+  background-color: rgb(10, 83, 34);
+}
+.badge-berry {
+  background-color: rgb(173, 45, 88);
+}
+.badge-aqua {
+  background-color: rgb(13, 221, 228);
+}
+.badge-lightblue {
+  background-color: rgb(100, 115, 245);
+}
+.badge-creme {
+  background-color: rgb(243, 214, 159);
+}
+.badge-dark {
+  background-color: rgb(16, 11, 34);
+}
+.badge-brown {
+  background-color: rgb(110, 51, 11);
+}
+
+.add-list_popup-colors {
+	margin-top: 25px;
+	margin-left: 10px;
+}
+
+.disabled {
+	background-color: rgb(113, 113, 113) !important;
+	pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

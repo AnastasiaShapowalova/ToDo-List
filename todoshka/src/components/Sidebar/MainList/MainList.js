@@ -6,10 +6,12 @@ const MainList = ({ menu }) => {
     <ul className="todo-list">
       <li className="todo-search">
         <AiOutlineSearch className="icon" />
-        <input></input>
+        <input type="search" placeholder="Search" className="search"></input>
       </li>
-      {menu.map((obj) => (
-        <li className={obj.active ? obj.class : 'todo-mainlist'}>
+      {menu.map((obj, index) => (
+        <li
+          key={index}
+          className={obj.active ? obj.className : 'todo-mainlist'}>
           <div>
             {obj.icon}
             <span className="count_l">{obj.count}</span>
